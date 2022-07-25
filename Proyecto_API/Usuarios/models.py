@@ -40,7 +40,6 @@ class Usuario(AbstractBaseUser):
     email = models.EmailField ("Correo electronico", unique=True, max_length= 250)
     nombres = models.CharField ("Nombres", blank=True, max_length=200, null=True)
     apellidos = models.CharField ("Apellidos", blank=True, max_length=200, null=True)
-    #imagen = models.ImageField("Imagen de perfil", upload_to='perfil/', height_field=None, width_field=None, max_length=200)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = MyUserManager()
